@@ -1,0 +1,46 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<BorderPane fx:id="mainBorderPane" fx:controller="com.mccune.contacts.Controller"
+            xmlns:fx="http://javafx.com/fxml" >
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Contacts">
+                    <items>
+                        <MenuItem text="Add" onAction="#showAddContactDialog"/>
+                        <MenuItem text="Edit" />
+                        <MenuItem text="Remove" />
+                    </items>
+                </Menu>
+            </MenuBar>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox>
+            <TableView fx:id="contactTable" prefWidth="800">
+                <columns>
+                    <TableColumn fx:id="firstNameColumn" text="First Name" prefWidth="200.0"/>
+                    <TableColumn fx:id="lastNameColumn" text="Last Name" prefWidth="200.0"/>
+                    <TableColumn fx:id="phoneNumberColumn" text="Phone Number" prefWidth="200.0"/>
+                    <TableColumn fx:id="notesColumn" text="Notes" prefWidth="200.0"/>
+                </columns>
+
+
+            </TableView>
+        </VBox>
+    </center>
+
+
+
+</BorderPane>
